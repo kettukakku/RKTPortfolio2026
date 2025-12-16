@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CVElement from "../components/CVElement.astro";
+
+//<-- Kanske flytta data till en separat fil -->
+const jobHistory = [
+  {
+    company: "MOONQUILL PUBLISHING",
+    position: "Freelance Editor",
+    period: "2024 - Present",
+    description: `My philosophy as an editor is to build a bridge between the author, 
+    publisher, and readers. It's through open communication and adaptability that I can connect worlds.`,
+  },
+  {
+    company: "ICEPETS",
+    position: "Content Writer",
+    period: "2024 - 2025",
+    description: `As a new team member on a legacy pet site, I've 
+    learned to balance preserving brand integrity with innovation.`,
+  },
+  {
+    company: "GAME RANT",
+    parentCompany: "VALNET",
+    position: "Content Writer",
+    period: "2023 - 2023",
+    description: `In a fast-paced environment with quick turnaround, I developed 
+    a keen eye for time management. What's more important to me than speed, however, 
+    is crafting well-sourced and engaging articles.`,
+  },
+  {
+    company: "ANIME GEEK",
+    parentCompany: "MONSTERS & CRITICS",
+    position: "Content Writer",
+    period: "2022 - 2023",
+    description: `My love of video games and animated media always seeps into my work. 
+    Keeping up with pop culture trends by tracking social media and participating in 
+    online communities has helped me broaden my writing career.`,
+  },
+];
+
+const educationHistory = [
+{
+    company: "UCLA EXTENSION",
+    position: "Editing & Publishing",
+    period: "2026",
+}, 
+{
+    company: "SUNDERBY FOLKHÖGSKOLA",
+    position: "Fine Art",
+    period: "2018 - 2019",
+  },
+  {
+    company: "CAMDEN COUNTY TECHNICAL SCHOOL",
+    position: "Video Production",
+    period: "2007 - 2011",
+  },
+];
+---
+
+<BaseLayout>
+     <div class="main-container">
+      <div class="name-header">
+        <h1 class="first-name">
+          <span class="first-letter">D</span>
+          <span class="subsequent-letters">ARIEN</span>
+        </h1>
+        <h2 class="middle-surname">
+          ARIS KIRST
+        </h2>
+        <hr class="hline" />
+        <p class="job-title">
+          EDITOR & WRITER
+        </p>
+      </div>
+      <section class="section-container">
+        <h2 class="section-header">
+          WORK EXPERIENCE
+        </h2>
+        {jobHistory.map((job) => (
+          <CVElement
+            company={job.company}
+            parentCompany={job.parentCompany}
+            position={job.position}
+            period={job.period}
+            description={job.description}
+          />
+        ))}
+      </section>
+      <section class="section-container">
+        <h2 class="section-header">
+          EDUCATION
+        </h2>
+        {educationHistory.map((edu) => (
+          <CVElement
+            company={edu.company}
+            position={edu.position}
+            period={edu.period}
+          />
+        ))}
+      </section>
+    </main>
+</BaseLayout>   
+
+<style>
+    .main-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem;
+    }
+    .name-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .first-name {
+      font-size: 3.75rem;
+      letter-spacing: 0.1em;
+      line-height: 0.6em;
+      margin-bottom: -1.5rem;
+      word-spacing: -0.5em; /* Reduce space between words */
+    }
+    .first-letter {
+      font-family: "Cinzel Decorative", serif;
+      font-size: larger;
+    }
+    .subsequent-letters {
+      font-family: "Cinzel", serif;
+    }
+    .middle-surname {
+    font-size: 2.25rem;
+    letter-spacing: 0.2em;
+    font-family: "Cinzel", serif;
+    margin-bottom: -0.5rem;
+    }
+    .hline {
+    width: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--accent);
+    margin-bottom: 0.25rem;
+    }
+    .job-title {
+    margin-top: 0.25rem;
+    letter-spacing: 0.4em;
+    }
+    .section-container {
+      width: 66.6667%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .section-header {
+      background: var(--accent);
+      padding-left: 1rem;
+    }
+</style>
+    

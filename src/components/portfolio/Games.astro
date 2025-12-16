@@ -1,0 +1,16 @@
+---
+import games from '../../data/games';
+---
+
+<div class="container">
+    {games.map((game) => (
+        <div class="game-section">
+            <img src={game.coverImage} alt={`Cover of ${game.title}`} class="game-cover" />
+            <h3 class="game-title">{game.title}</h3>
+            <p class="game-genre">{game.genre}</p>
+            <p class="game-desc">{game.description}</p>
+        </div>
+    ))}
+</div>
+
+<!-- TODO styling -->

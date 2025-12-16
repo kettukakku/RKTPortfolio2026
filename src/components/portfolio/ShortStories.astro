@@ -1,0 +1,80 @@
+---
+import stories, { Genre } from '../../data/stories.ts';
+---
+
+<div class="container">
+    {Object.values(Genre).map((genre) => (
+        <div>
+            <h2 class="genre-label">{genre}</h2>
+            <div class="stories-grid">
+                {stories
+                    .filter((story) => story.genre === genre)
+                    .map((story) => (
+                        <a href={`stories/${story.slug}`} class="story-card" style={`background-image: url('${story.coverImage}');`}>
+                            <div class="story-card-content">
+                                <h3 class="story-title">{story.title}</h3>
+                                <p class="story-blurb">{story.description}</p>
+                            </div>
+                        </a>
+                    ))}
+            </div>
+        </div>
+    ))}
+</div>
+
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .genre-label {
+    background: var(--accent);
+    padding-left: 1rem;
+    text-transform: uppercase;
+    }
+    .stories-grid {
+        display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+    }
+    .story-card {
+        padding: 0.5rem;
+		width: 200px;
+        height: 150px;
+		box-shadow: 2px 2px 10px var(--black);
+		text-align: center;
+		border: 5px solid transparent;
+		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .story-card:hover {
+        border-color: var(--accent);
+		cursor: pointer;
+		box-shadow: 2px 2px 10px var(--gray);
+    }
+    .story-card-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .story-title {
+		font-weight: 100;
+		color: var(--gray-900, #1a1a1a);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		font-family: "Anonymous Pro", monospace; 
+    }
+    .story-blurb {
+        
+    }
+    .story-card:hover .story-title {
+        
+    }
+
+    .story-card:hover .story-blurb {
+       
+    }
+        
+</style>

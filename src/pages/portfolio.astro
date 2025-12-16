@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import categories from '../data/categories.ts';
+
+const activeClass = 'active'; 
+const categoryIds = categories.map(c => c.id);
+const visibleSection = 'visible'
+---
+<BaseLayout>
+    <div class="carousel">
+        {categories.map((category) => (
+            <a 
+                href={`#${category.id}`} 
+                id={`${category.id}`} 
+                class="category-card"
+            >
+                <p class="category-text">{category.name}</p>
+            </a>
+        ))}
+    </div>
+    <div class="content-container">
+        {categories.map((category) => {
+            const Component = category.component; 
+            
+            return (
+                <section 
+                    id={`${category.id}-section`} 
+                    class="category-content-block" 
+                >
+                    {Component ? <Component /> : <p>Content for {category.name} goes here.</p>}
+                </section>
+            );
+        })}
+    </div>
+</BaseLayout>
+
+<style>
+    .carousel {
+		height: 300px;
+		background-color: var(--black);
+        display: flex;
+	}
+    .category-card {
+        width: 300px;
+        background-color: var(--black);
+        text-align: center;
+        border: 5px solid transparent;
+        transition: border-color 0.2s ease-in-out;
+        scroll-margin-top: 100vh;
+    }
+    .category-card:hover {
+        border-color: var(--accent);
+        cursor: pointer;
+    }
+    .category-card:focus {
+        outline: none;
+        border-color: var(--accent);
+    }
+    .category-text {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-family: "Anonymous Pro", monospace;
+        color: white;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .active {
+        background-color: var(--accent);
+    }
+    .content-container section {
+        display: none;
+        scroll-margin-top: 100vh;
+    }
+    .content-container section.visible {
+        display: block;
+    }
+</style>
+
+<script define:vars={{ activeClass, visibleSection, categoryIds }}>
+
+    function updateActiveDisplay() {
+        const currentHash = window.location.hash.substring(1) || categoryIds[0];
+        
+        categoryIds.forEach(id => {
+            const linkElement = document.getElementById(id);
+            if (linkElement) {
+                const action = (id === currentHash) ? 'add' : 'remove';
+                linkElement.classList[action](activeClass);
+            }
+
+            const contentElement = document.getElementById(`${id}-section`);
+            if (contentElement) {
+                const action = (id === currentHash) ? 'add' : 'remove';
+                contentElement.classList[action](visibleSection);
+            }
+        });
+    }
+
+    updateActiveDisplay();
+    window.addEventListener('hashchange', updateActiveDisplay);
+</script>

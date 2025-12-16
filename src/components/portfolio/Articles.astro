@@ -1,0 +1,13 @@
+---
+import articles from "../../data/articles";
+---
+<div class="container">
+    {articles.map((article) => (
+        <div class="article-section">
+            <h3 class="article-title">{article.title}</h3>
+            <p class="article-publication">{article.publication}</p>
+            <a href={article.link} target="_blank" class="article-link">Read More</a>
+        </div>
+    ))}
+
+<!-- TODO styling -->

@@ -1,44 +1,29 @@
-# Astro Starter Kit: Blog
+# 2026 Portfolio Site
+~~~this one is the one~~~
 
-```sh
-npm create astro@latest -- --template blog
-```
+## TODO
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### CSS Styling
+- [ ] Portfolio sections (one for short stories, books, articles, etc.)
+    - [ ] Short story cards need styling.
+    - [ ] Articles cards need styling.
+    - [ ] Games cards need styling.
+- [ ] Story page template
+- [ ] Main blog page with tags/search
+- [ ] Blog page template
+- [ ] Contact page (idk if I even want to be contacted tbf)
+- [ ] Fiddle with fonts (especially on Resume page)
 
-Features:
+### Quality of Life
+- [ ] Mobile support
+- [ ] Light & Dark Mode
+- [ ] This template came with an RSS feed set up, but like? I'm not even old enough to know what that is. Do people use RSS? Is it like IRC?
+- [ ] This template also has sitemap support?
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
+### Art
+- [ ] Placeholder/Fallback images
+    - [x] Book covers
+- [ ] Index carousel
 
 ## 🧞 Commands
 
@@ -53,10 +38,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
