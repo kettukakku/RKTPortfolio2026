@@ -14,12 +14,40 @@ export interface Story {
 
 const stories : Story[] = [
     {
-        title: "The Cat's Tooth",
-        description: "A whimsical tale of a cat who discovers a magical tooth that grants wishes.",
+        title: "Lorem Ipsum",
+        description: "Excepteur ad sit ex veniam in aute sunt.",
         slug: "cats-tooth",
         coverImage: "/images/stories/cats-tooth-cover.jpg",
         genre: Genre.Fantasy,
-    }
+    },
+    {
+        title: "Lorem Ipsum",
+        description: "Excepteur ad sit ex veniam in aute sunt.",
+        slug: "cats-tooth",
+        coverImage: "/images/stories/cats-tooth-cover.jpg",
+        genre: Genre.Fantasy,
+    },
+     {
+        title: "Lorem Ipsum",
+        description: "Excepteur ad sit ex veniam in aute sunt.",
+        slug: "cats-tooth",
+        coverImage: "/images/stories/cats-tooth-cover.jpg",
+        genre: Genre.Fantasy,
+    },
+     {
+        title: "Lorem Ipsum",
+        description: "Excepteur ad sit ex veniam in aute sunt.",
+        slug: "cats-tooth",
+        coverImage: "/images/stories/cats-tooth-cover.jpg",
+        genre: Genre.SciFi,
+    },
+     {
+        title: "Lorem Ipsum",
+        description: "Excepteur ad sit ex veniam in aute sunt.",
+        slug: "cats-tooth",
+        coverImage: "/images/stories/cats-tooth-cover.jpg",
+        genre: Genre.Horror,
+    },
 ]
 
 export default stories;

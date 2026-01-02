@@ -22,7 +22,18 @@ const edits: Book[] = [
             amazon: "https://www.amazon.com/dp/example-symbiotic",
             goodreads: "https://www.goodreads.com/book/show/example-symbiotic",
         },
-    }
+    },
+    {
+        title: "Fairytale Hunter Cain",
+        author: "LlazyLlama",
+        genre: "LitRPG / Fantasy",
+        blurb: "Trapped in a cage and marked for a mad ritual? Nightmare level unlocked.\n\nCain doesn’t remember how he got there, but the forest has already decided his fate. Blood soaks the ground, red-cloaked demons watch him from the shadows, and something ancient wants him dead.\n\nIt’s kill or be killed… and Cain isn’t about to die on his knees.\n\nArmed with a mysterious system, he must survive a realm corrupted by magic and stalked by nightmares made flesh. To turn the tables, he’ll have to level up, unlock hidden skills, and reshape the very fabric of this twisted world.\n\nThe Wild Hunt has begun, and the prey must become the hunter.",
+        coverImage: "/images/books/fairytalehuntercain.jpg",
+        links: {
+            amazon: "https://www.amazon.com/dp/example-symbiotic",
+            goodreads: "https://www.goodreads.com/book/show/example-symbiotic",
+        },
+    },
 ]
 
 export default edits;

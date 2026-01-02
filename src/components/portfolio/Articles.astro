@@ -4,10 +4,67 @@ import articles from "../../data/articles";
 <div class="container">
     {articles.map((article) => (
         <div class="article-section">
-            <h3 class="article-title">{article.title}</h3>
-            <p class="article-publication">{article.publication}</p>
-            <a href={article.link} target="_blank" class="article-link">Read More</a>
+            <img src={article.coverImage} alt={`Cover of article: ${article.title}`} class="article-cover" />
+            <div class="article-details">
+                <h3 class="article-title">{article.title}</h3>
+                <p class="article-publication">{article.publication}</p>
+                <p class="article-excerpt">{article.excerpt}</p>
+                <a href={article.link} target="_blank" class="article-link">Read More</a>
+            </div>
         </div>
     ))}
 
-<!-- TODO styling -->
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 30px;
+    }
+    .article-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .article-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .article-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        width: 400px;
+    }
+    .article-title {
+        font-size: 1.4em;
+        margin: 0;
+        font-family: var(--display-font);
+        text-align: center;
+    }
+    .article-publication {
+        font-style: italic;
+        color: #666;
+        margin: 0;
+        font-family: var(--display-font);
+    }
+    .article-excerpt {
+        font-family: var(--paragraph-font);
+        text-align: center;
+    }
+    .article-link {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: var(--display-font);
+    }
+    .article-link:hover {
+        color: var(--accent);
+    }
+    .article-cover {
+        width: 500px;
+        height: auto;
+    }
+</style>

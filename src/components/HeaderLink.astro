@@ -17,9 +17,9 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
-		font-family: "Anonymous Pro", monospace;
+		font-family: var(--display-font);
 	}
 	a:hover {
-		font-weight: 900;
+		color: var(--accent);
 	}
 </style>

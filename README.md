@@ -4,15 +4,15 @@
 ## TODO
 
 ### CSS Styling
-- [ ] Portfolio sections (one for short stories, books, articles, etc.)
-    - [ ] Short story cards need styling.
-    - [ ] Articles cards need styling.
-    - [ ] Games cards need styling.
+- [x] Portfolio sections (one for short stories, books, articles, etc.)
+    - [x] Short story cards need styling.
+    - [x] Articles cards need styling.
+    - [x] Games cards need styling.
 - [ ] Story page template
 - [ ] Main blog page with tags/search
 - [ ] Blog page template
 - [ ] Contact page (idk if I even want to be contacted tbf)
-- [ ] Fiddle with fonts (especially on Resume page)
+- [x] Fiddle with fonts (especially on Resume page)
 
 ### Quality of Life
 - [ ] Mobile support
@@ -21,7 +21,7 @@
 - [ ] This template also has sitemap support?
 
 ### Art
-- [ ] Placeholder/Fallback images
+- [x] Placeholder/Fallback images
     - [x] Book covers
 - [ ] Index carousel
 

@@ -6,8 +6,9 @@
 	--gray-light: #a3a5ae;
 	--gray-dark: #4a4f55;
 	--gray-gradient: #f7fafc, #e2e8f0;
-	--box-shadow: 0 2px 6px rgba(123,130,140,0.25),
-		0 8px 24px rgba(123,130,140,0.33), 0 16px 32px rgba(123,130,140,0.33);
+
+  --display-font: 'SpecialElite-Regular', monospace;
+  --paragraph-font: 'AveriaLibre-Regular', serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +38,28 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "SyneMono-Regular";
+  src: url("/fonts/SyneMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpecialElite-Regular";
+  src: url("/fonts/SpecialElite-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AveriaLibre-Regular";
+  src: url("/fonts/AveriaLibre-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;

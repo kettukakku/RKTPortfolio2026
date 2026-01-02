@@ -6,11 +6,65 @@ import games from '../../data/games';
     {games.map((game) => (
         <div class="game-section">
             <img src={game.coverImage} alt={`Cover of ${game.title}`} class="game-cover" />
-            <h3 class="game-title">{game.title}</h3>
-            <p class="game-genre">{game.genre}</p>
-            <p class="game-desc">{game.description}</p>
+            <div class="game-details">
+                <h3 class="game-title">{game.title}</h3>
+                <p class="game-genre">{game.genre}</p>
+                <p class="game-desc">{game.description}</p>
+                <a href={game.link} target="_blank" class="game-link">Play In Browser</a>
+            </div>
         </div>
     ))}
 </div>
 
-<!-- TODO styling -->
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 30px;
+    }
+    .game-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .game-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .game-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .game-cover {
+        width: 300px;
+        height: auto;
+    }
+    .game-title {
+        font-size: 1.4em;
+        margin: 0;
+        font-family: var(--display-font);
+    }
+    .game-genre {
+        font-style: italic;
+        color: #666;
+        margin: 0;
+        font-family: var(--display-font);
+    }
+    .game-desc {
+        font-family: var(--paragraph-font);
+        text-align: center;
+        max-width: 600px;
+    }
+    .game-link {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: var(--display-font);
+    }
+    .game-link:hover {
+        color: var(--accent);
+    }
+    </style>
