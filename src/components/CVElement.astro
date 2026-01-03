@@ -2,20 +2,26 @@
 const { company, parentCompany, position, period, description } = Astro.props;
 ---
 
-<h3 class="job-title">
-    {company} {parentCompany && `(${parentCompany})`}
-</h3>
-<div class="job-details">
-    <p>{position}</p>
-    <p>{period}</p>
+<div class="element-container">
+    <h3 class="job-title">
+        {company} {parentCompany && `(${parentCompany})`}
+    </h3>
+    <div class="job-details">
+        <p>{position}</p>
+        <p>{period}</p>
+    </div>
+    {description && <p class="description">{description}</p>}
 </div>
-{description && <p class="description">{description}</p>}
 
 <style>
+    .element-container {
+        margin-bottom: 2rem;
+    }
     .job-title {
         font-weight: bold;
         font-size: 1.25rem;
         letter-spacing: 0.1em;
+        margin:  0.5rem 0;
         font-family: var(--display-font);
     }
     .job-details p {

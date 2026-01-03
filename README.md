@@ -3,27 +3,24 @@
 
 ## TODO
 
-### CSS Styling
-- [x] Portfolio sections (one for short stories, books, articles, etc.)
-    - [x] Short story cards need styling.
-    - [x] Articles cards need styling.
-    - [x] Games cards need styling.
+### Desktop Styling
 - [ ] Story page template
 - [ ] Main blog page with tags/search
 - [ ] Blog page template
 - [ ] Contact page (idk if I even want to be contacted tbf)
-- [x] Fiddle with fonts (especially on Resume page)
+
+### Mobile Styling
 
 ### Quality of Life
-- [ ] Mobile support
 - [ ] Light & Dark Mode
 - [ ] This template came with an RSS feed set up, but like? I'm not even old enough to know what that is. Do people use RSS? Is it like IRC?
 - [ ] This template also has sitemap support?
 
 ### Art
-- [x] Placeholder/Fallback images
-    - [x] Book covers
 - [ ] Index carousel
+
+### Misc
+- [ ] The routing is broken on GitHub pages. Not the biggest deal, since that's only for testing. But it could be nice to fix that unless I end up deploying on Netlify before then.
 
 ## 🧞 Commands
 
