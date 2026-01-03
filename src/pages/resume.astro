@@ -6,6 +6,7 @@ import CVElement from "../components/CVElement.astro";
 const jobHistory = [
   {
     company: "MOONQUILL PUBLISHING",
+    link: "https://moonquill.com/",
     position: "Freelance Editor",
     period: "2024 - Present",
     description: `My philosophy as an editor is to build a bridge between the author, 
@@ -13,6 +14,7 @@ const jobHistory = [
   },
   {
     company: "ICEPETS",
+    link: "https://icepets.com/",
     position: "Content Writer",
     period: "2024 - 2025",
     description: `As a new team member on a legacy pet site, I've 
@@ -20,6 +22,7 @@ const jobHistory = [
   },
   {
     company: "GAME RANT",
+    link: "https://gamerant.com/author/darien-kirst/",
     parentCompany: "VALNET",
     position: "Content Writer",
     period: "2023 - 2023",
@@ -29,6 +32,7 @@ const jobHistory = [
   },
   {
     company: "ANIME GEEK",
+    link: "https://www.animegeek.com/author/darien-aris-kirst/",
     parentCompany: "MONSTERS & CRITICS",
     position: "Content Writer",
     period: "2022 - 2023",
@@ -41,16 +45,19 @@ const jobHistory = [
 const educationHistory = [
 {
     company: "UCLA EXTENSION",
+    link: "https://www.uclaextension.edu/writing/editing-and-publishing",
     position: "Editing & Publishing",
     period: "2026",
 }, 
 {
     company: "SUNDERBY FOLKHÖGSKOLA",
+    link: "https://www.sunderbyfolkhogskola.se/kurser/konstskolan-ar1/",
     position: "Fine Art",
     period: "2018 - 2019",
   },
   {
     company: "CAMDEN COUNTY TECHNICAL SCHOOL",
+    link: "https://ccts.org/apps/pages/index.jsp?uREC_ID=260564&type=d&termREC_ID=&pREC_ID=500945",
     position: "Video Production",
     period: "2007 - 2011",
   },
@@ -79,6 +86,7 @@ const educationHistory = [
         {jobHistory.map((job) => (
           <CVElement
             company={job.company}
+            link={job.link}
             parentCompany={job.parentCompany}
             position={job.position}
             period={job.period}
@@ -93,6 +101,7 @@ const educationHistory = [
         {educationHistory.map((edu) => (
           <CVElement
             company={edu.company}
+            link={edu.link}
             position={edu.position}
             period={edu.period}
           />

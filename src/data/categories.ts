@@ -18,12 +18,6 @@ const categories = [
     component: Books,
   },
   {
-    name: 'Articles',
-    id: 'articles',
-    image: '/assets/portfolio/articles/cover.jpg',
-    component: Articles,
-  },
-  {
     name: 'Editing',
     id: 'editing',
     image: '/assets/portfolio/editing/cover.jpg',

@@ -10,6 +10,7 @@
 - [ ] Contact page (idk if I even want to be contacted tbf)
 
 ### Mobile Styling
+- [ ] Portfolio page
 
 ### Quality of Life
 - [ ] Light & Dark Mode

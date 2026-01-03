@@ -37,45 +37,55 @@ import stories, { Genre } from '../../data/stories.ts';
     }
     .stories-grid {
         display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
 		gap: 1.5rem;
     }
     .story-card {
         padding: 0.5rem;
-		width: 200px;
+        width: 200px;
         height: 200px;
-		text-align: center;
-		border: 2px solid black;
-		transition: border-color 0.2s ease-in-out;
+        text-align: center;
+        border: 2px solid black;
+        transition: border-color 0.1s ease-in-out;
+        position: relative;
+        background-size: cover;
+        background-position: center;
     }
     .story-card:hover {
         border-color: var(--accent);
-		cursor: pointer;
+        cursor: pointer;
     }
     .story-card-content {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    }
+    .story-title,
+    .story-blurb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        width: 90%;
+        transition: opacity 0.5s;
     }
     .story-title {
-		font-weight: 100;
-		color: var(--gray-900, #1a1a1a);
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-		font-family: var(--display-font); 
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-family: var(--display-font);
+        opacity: 1;
     }
     .story-blurb {
         font-family: var(--paragraph-font);
-        
+        opacity: 0;
+        visibility: hidden;
     }
     .story-card:hover .story-title {
-        
+        opacity: 0;
+        visibility: hidden;
     }
-
     .story-card:hover .story-blurb {
-       
+        opacity: 1;
+        visibility: visible;
     }
         
 </style>

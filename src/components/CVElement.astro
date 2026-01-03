@@ -1,10 +1,10 @@
 ---
-const { company, parentCompany, position, period, description } = Astro.props;
+const { company, link, parentCompany, position, period, description } = Astro.props;
 ---
 
 <div class="element-container">
     <h3 class="job-title">
-        {company} {parentCompany && `(${parentCompany})`}
+        <a href={link} class="link">{company} {parentCompany && `(${parentCompany})`}</a>
     </h3>
     <div class="job-details">
         <p>{position}</p>
@@ -34,5 +34,8 @@ const { company, parentCompany, position, period, description } = Astro.props;
         margin-top: 0.5rem;
         line-height: 1.4;
         font-family: var(--paragraph-font);
+    }
+    .link:hover {
+        color: var(--accent);
     }
     </style>
